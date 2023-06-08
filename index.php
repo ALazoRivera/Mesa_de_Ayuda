@@ -4,7 +4,7 @@
         require_once("models/Usuario.php");
         $usuario = new Usuario();
         $usuario->login();
-    }
+    } 
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Mesa de Ayuda</>::Acceso</title>
+	<title>Mesa_de_Ayuda</>::Acceso</title>
 
 	<link href="img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
 	<link href="img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
@@ -40,15 +40,15 @@
                         if (isset($_GET["m"])){
                             switch($_GET["m"]){
                                 case "1";
-                                ?>
-                                    <div class="alert alert-danger" role="alert">
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                        <i class="font-icon font-icon-warning"></i>
-                                        El Usuario y/o Contraseña son incorrectos.
-                                    </div>
-                                <?php
+                                    ?>
+                                        <div class="alert alert-warning alert-icon alert-close alert-dismissible fade in" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                            <i class="font-icon font-icon-warning"></i>
+                                            El Usuario y/o Contraseña son incorrectos.
+                                        </div> 
+                                    <?php
                                 break;
 
                                 case "2";
@@ -73,22 +73,23 @@
                     </div>
                     <div class="form-group">
                         <div class="float-right reset">
-                            <a href="reset-password.html">Cambiar contraseña</a>
+                            <a href="reset-password.html">Cambiar Contraseña</a>
                         </div>
                     </div>
                     <input type="hidden" name="enviar" class="form-control" value="si">
                     <button type="submit" class="btn btn-rounded">Acceder</button>
-                </form>
+                 </form>
             </div>
         </div>
     </div>
+
 
 <script src="public/js/lib/jquery/jquery.min.js"></script>
 <script src="public/js/lib/tether/tether.min.js"></script>
 <script src="public/js/lib/bootstrap/bootstrap.min.js"></script>
 <script src="public/js/plugins.js"></script>
 <script type="text/javascript" src="public/js/lib/match-height/jquery.matchHeight.min.js"></script>
-    <script>
+<script>
         $(function() {
             $('.page-center').matchHeight({
                 target: $('html')
@@ -103,7 +104,7 @@
                 },100);
             });
         });
-    </script>
+</script>
 <script src="public/js/app.js"></script>
 </body>
 </html>
