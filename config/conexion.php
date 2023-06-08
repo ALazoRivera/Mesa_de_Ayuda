@@ -14,7 +14,7 @@
             }
         }
 
-        public function set_name(){
+        public function set_names(){
             return $this->dbh->query("SET NAMES 'utf8'");
         }
 

@@ -44,12 +44,12 @@
 					<form method="post" id="ticket_form">
 
 						<input type="hidden" id="usu_id" name="usu_id" value="<?php echo $_SESSION["usu_id"] ?>">
-
+						
 						<div class="col-lg-6">
 							<fieldset class="form-group">
-								<label class="form-label semibold" for="exampleInput">Categoria</label>
+								<label class="form-label semibold" for="exampleInput">Categoría</label>
 								<select id="cat_id" name="cat_id" class="form-control">
-									
+
 								</select>
 							</fieldset>
 						</div>
