@@ -34,7 +34,7 @@
                     <div class="sign-avatar">
                         <img src="public/img/avatar-sign.png" alt="">
                     </div>
-                    <header class="sign-title">Acceso</header>
+                    <header class="sign-title" id="lbltitulo">Acceso Usuario</header>
 
                     <?php
                         if (isset($_GET["m"])){
@@ -65,6 +65,7 @@
                             }
                         }
                     ?>
+
                     <div class="form-group">
                         <input type="text" id="usu_correo" name="usu_correo" class="form-control" placeholder="E-Mail"/>
                     </div>
@@ -75,6 +76,9 @@
                         <div class="float-right reset">
                             <a href="reset-password.html">Cambiar Contraseña</a>
                         </div>
+                        <div class="float-left reset">
+                            <a href="#" id="btnsoporte">Acceso Soporte</a>
+                        </div>
                     </div>
                     <input type="hidden" name="enviar" class="form-control" value="si">
                     <button type="submit" class="btn btn-rounded">Acceder</button>
@@ -82,7 +86,6 @@
             </div>
         </div>
     </div>
-
 
 <script src="public/js/lib/jquery/jquery.min.js"></script>
 <script src="public/js/lib/tether/tether.min.js"></script>
