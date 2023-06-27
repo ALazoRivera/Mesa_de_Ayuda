@@ -30,7 +30,9 @@
     <div class="page-center">
         <div class="page-center-in">
             <div class="container-fluid">
+
                 <form class="sign-box" action="" method="post" id="login_form">
+                <input type="hidden" id="rol_id" name="rol_id" value="1">
                     <div class="sign-avatar">
                         <img src="public/img/avatar-sign.png" alt="">
                     </div>
@@ -109,5 +111,8 @@
         });
 </script>
 <script src="public/js/app.js"></script>
+
+<script type="text/javascript" src="index.js"></script>
+
 </body>
 </html>
