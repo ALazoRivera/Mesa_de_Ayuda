@@ -9,6 +9,9 @@
 <link href="img/favicon.png" rel="icon" type="image/png">
 <link href="img/favicon.ico" rel="shortcut icon">
 
+<link rel="stylesheet" href="../../public/css/separate/vendor/fancybox.min.css">
+<link rel="stylesheet" href="../../public/css/separate/pages/activity.min.css">
+
 <link rel="stylesheet" href="../../public/css/lib/summernote/summernote.css"/>
 <link rel="stylesheet" href="../../public/css/separate/pages/editor.min.css">
 
@@ -23,13 +26,5 @@
 
 <link rel="stylesheet" href="../../public/css/main.css">
 
-<!-- <link rel="stylesheet" href="../../public/css/separate/vendor/fancybox.min.css">
-<link rel="stylesheet" href="../../public/css/separate/pages/activity.min.css"> -->
-
-
-<!-- 
-
-
-
-<link rel="stylesheet" href="../../public/css/separate/vendor/select2.min.css"> -->
+<!-- <link rel="stylesheet" href="../../public/css/separate/vendor/select2.min.css"> -->
 

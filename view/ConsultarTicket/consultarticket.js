@@ -114,13 +114,10 @@ $(document).ready(function(){
             },
         }).DataTable();
     }
-
     
 });
 
 function ver(tick_id){
-    console.log(tick_id);
-
+    window.open('http://localhost/PERSONAL_HelpDesk/view/DetalleTicket/?ID='+ tick_id +'');
 }
-
-init();
+ 
