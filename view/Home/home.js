@@ -5,7 +5,7 @@ function init(){
 $(document).ready(function(){
     var usu_id = $('#user_idx').val();
 
-    if ( $('#rol_idx').val() == 1){
+    if ($('#rol_idx').val() == 1){
         $.post("../../controller/usuario.php?op=total", {usu_id:usu_id}, function (data) {
             data = JSON.parse(data);
             $('#lbltotal').html(data.TOTAL);
@@ -50,7 +50,7 @@ $(document).ready(function(){
             $('#lbltotalcerrado').html(data.TOTAL);
         });  
 
-        $.post("../../controller/ticket.php?op=grafico",function (data) {
+        $.post("../../controller/ticket.php?op=grafico", function (data) {
             data = JSON.parse(data);
     
             new Morris.Bar({

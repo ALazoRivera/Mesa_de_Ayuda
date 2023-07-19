@@ -35,10 +35,11 @@
                             <span class="lbl">Inicio</span>
                         </a>
                     </li>
+                    </li>
                     <li class="blue-dirty">
-                        <a href="..\NuevoTicket\">
+                        <a href="..\MntUsuario\">
                             <span class="glyphicon glyphicon-th"></span>
-                            <span class="lbl">Nuevo Ticket</span>
+                            <span class="lbl">Mantenimiento Usuario</span>
                         </a>
                     </li>
                     <li class="blue-dirty">

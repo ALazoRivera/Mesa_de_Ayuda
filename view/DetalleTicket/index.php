@@ -68,14 +68,14 @@
           	</div>
 
     		<section class="activity-line" id="lbldetalle">
+
 			</section>
 			
-			<div class="box-typical box-typical-padding">
+			<div class="box-typical box-typical-padding" id="pnldetalle">
 				<p>
 					Ingrese su duda o consulta
 				</p>
-				<div class="row">
-					
+				<div class="row">					
 						<div class="col-lg-12">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="tickd_descrip">Descripción</label>
@@ -87,11 +87,11 @@
 						<div class="col-lg-12">
 							<button type="button" id="btnenviar" class="btn btn-rounded btn-inline btn-primary">Enviar</button>
 							<button type="button" id="btncerrarticket" class="btn btn-rounded btn-inline btn-warning">Cerrar Ticket</button>
-						</div>
-					
+						</div>					
 				</div>
 
 			</div>
+			
 		</div>
 	</div>
 	<!-- Contenido -->

@@ -3,7 +3,8 @@
     require_once("../models/Ticket.php");
     $ticket = new Ticket();
 
-    switch($_GET["op"]){        
+    switch($_GET["op"]){      
+
         case "insert":
             $ticket->insert_ticket($_POST["usu_id"],$_POST["cat_id"],$_POST["tick_titulo"],$_POST["tick_descrip"]);
         break;
@@ -21,6 +22,7 @@
                 $sub_array[] = $row["tick_id"];
                 $sub_array[] = $row["cat_nom"];
                 $sub_array[] = $row["tick_titulo"];
+                
                 if ($row["tick_estado"]=="Abierto"){
                     $sub_array[] = '<span class="label label-pill label-success">Abierto</span>';
                 }else{
@@ -48,6 +50,7 @@
                 $sub_array[] = $row["tick_id"];
                 $sub_array[] = $row["cat_nom"];
                 $sub_array[] = $row["tick_titulo"];
+                
                 if ($row["tick_estado"]=="Abierto"){
                     $sub_array[] = '<span class="label label-pill label-success">Abierto</span>';
                 }else{
@@ -81,7 +84,7 @@
                                     <div class="activity-line-item-user">
                                         <div class="activity-line-item-user-photo">
                                             <a href="#">
-                                                <img src="../../public/img/photo-64-2.jpg" alt="">
+                                                <img src="../../public/<?php echo $row['rol_id']?>.png" alt="">
                                             </a>
                                         </div>
                                         <div class="activity-line-item-user-name"><?php echo $row['usu_nom'].' '.$row['usu_ape'];?></div>
@@ -123,6 +126,7 @@
                     $output["tick_id"] = $row["tick_id"];
                     $output["usu_id"] = $row["usu_id"];
                     $output["cat_id"] = $row["cat_id"];
+                    
                     $output["tick_titulo"] = $row["tick_titulo"];
                     $output["tick_descrip"] = $row["tick_descrip"];
 
@@ -132,7 +136,9 @@
                         $output["tick_estado"] = '<span class="label label-pill label-danger">Cerrado</span>';
                     }
 
-                    $output["fech_crea"] =$row["fech_crea"];
+                    $output["tick_estado_texto"] = $row["tick_estado"];
+
+                    $output["fech_crea"] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
                     $output["usu_nom"] = $row["usu_nom"];
                     $output["usu_ape"] = $row["usu_ape"];
                     $output["cat_nom"] = $row["cat_nom"];
@@ -143,6 +149,44 @@
 
         case "insertdetalle":
             $ticket->insert_ticketdetalle($_POST["tick_id"],$_POST["usu_id"],$_POST["tickd_descrip"]);
+        break;
+
+        case "total";
+            $datos=$ticket->get_ticket_total();
+            if(is_array($datos)==true and count($datos)>0){
+                foreach($datos as $row)
+                {
+                    $output["TOTAL"] = $row["TOTAL"];
+                }
+                echo json_encode($output);
+            }                        
+        break;
+
+        case "totalabierto";
+            $datos=$ticket->get_ticket_totalabierto();
+            if(is_array($datos)==true and count($datos)>0){
+                foreach($datos as $row)
+                {
+                    $output["TOTAL"] = $row["TOTAL"];
+                }
+                echo json_encode($output);
+            }                        
+        break;
+
+        case "totalcerrado";
+            $datos=$ticket->get_ticket_totalcerrado();
+            if(is_array($datos)==true and count($datos)>0){
+                foreach($datos as $row)
+                {
+                    $output["TOTAL"] = $row["TOTAL"];
+                }
+                echo json_encode($output);
+            }                        
+        break;
+
+        case "grafico";
+            $datos=$ticket->get_ticket_grafico();  
+            echo json_encode($datos);
         break;
     }
 ?>

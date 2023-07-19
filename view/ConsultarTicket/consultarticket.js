@@ -120,4 +120,5 @@ $(document).ready(function(){
 function ver(tick_id){
     window.open('http://localhost/PERSONAL_HelpDesk/view/DetalleTicket/?ID='+ tick_id +'');
 }
- 
+
+init();

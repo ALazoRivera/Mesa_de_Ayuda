@@ -30,7 +30,7 @@ function guardaryeditar(e){
     e.preventDefault();
     var formData = new FormData($("#ticket_form")[0]);
     if ($('#tick_descrip').summernote('isEmpty') || $('#tick_titulo').val()==''){
-        swal("Advertencia!", "Campos Vacios", "warning");
+        swal("Advertencia!", "Campos Vacíos", "warning");
     }else{
         $.ajax({
             url: "../../controller/ticket.php?op=insert",
